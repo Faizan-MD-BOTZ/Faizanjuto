@@ -1,91 +1,159 @@
-<h1 align="center">
-  <img src="https://files.catbox.moe/rexuf8.jpg" alt="AYANAT-AI" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
-</h1>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="630" viewBox="0 0 1200 420" role="img" aria-label="BOT FEATURE ⏬">
+  <defs>
+    <!-- Neon rainbow border -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%"   stop-color="#00e5ff"/>
+      <stop offset="25%"  stop-color="#7a5cff"/>
+      <stop offset="50%"  stop-color="#ff2ae0"/>
+      <stop offset="75%"  stop-color="#ffb300"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-1,0" to="1,0" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
 
-<h1 align="center">
-  <span style="background: linear-gradient(to right, #ff00cc, #3333ff, #00ffcc, #33ff33, #ffcc00); 
-               -webkit-background-clip: text; 
-               color: transparent; 
-               font-size: 45px; 
-               font-weight: bold;">
-    ✨ AYANAT-AI ✨
-  </span>
-</h1>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%"   stop-color="#0b0b0f"/>
+      <stop offset="50%"  stop-color="#0d0f1a"/>
+      <stop offset="100%" stop-color="#0b0b0f"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-0.5,0" to="0.5,0" dur="12s" repeatCount="indefinite"/>
+    </linearGradient>
 
-<p align="center">
-  <b>A multi-device WhatsApp bot created & maintained by <span style="color:#00FFFF">ANAYAT</span> 🚀</b>
-</p>
+    <!-- Shine sweep -->
+    <linearGradient id="shine" x1="-100%" y1="0" x2="200%" y2="0">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-1,0" to="1,0" dur="3.5s" repeatCount="indefinite"/>
+    </linearGradient>
 
----
+    <!-- Live dots gradient -->
+    <linearGradient id="dotsGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%"   stop-color="#00ffa3"/>
+      <stop offset="50%"  stop-color="#00c3ff"/>
+      <stop offset="100%" stop-color="#7cff00"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-1,0" to="1,0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
 
-## ⭐ 𝙁𝙊𝙍𝙆 & 𝙎𝙏𝘼𝙍
-<p align="center">
-  <a href="https://anayat-ai-kashmairi.onrender.com/">
-    <img src="https://img.shields.io/badge/Fork-Repo-ff00ff?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://github.com/ANAYAT-AI/ANAYAT-AI">
-    <img src="https://img.shields.io/github/stars/ANAYAT-AI/ANAYAT-AI?style=for-the-badge&color=gold&logo=github" />
-  </a>
-</p>
-<p align="center">💡 Don’t forget to <b>Fork</b> & <b>Star ⭐</b> this repo before using!</p>
+    <!-- Glow -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
----
+    <!-- Clip: inner box (to keep dots inside) -->
+    <clipPath id="innerClip">
+      <!-- height 340 -> 400, y 20 -> 10 -->
+      <rect x="20" y="10" width="1160" height="400" rx="20"/>
+    </clipPath>
+  </defs>
 
-## 🔑 𝙂𝙀𝙏 𝙎𝙀𝙎𝙎𝙄𝙊𝙉
-<p align="center">
-  <a href="https://anayat-hacker-iit3.onrender.com">
-    <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
-  </a>
-</p>
-<p align="center">📲 Click above button to generate your <b>Session ID</b> (required for deployment).</p>
+  <!-- Outer frame (y 20 -> 10, height 360 -> 400) -->
+  <rect x="20" y="10" width="1160" height="400" rx="20" fill="url(#bgGrad)"
+        stroke="url(#borderGrad)" stroke-width="4">
+    <animate attributeName="stroke-width" values="4;6;4" dur="2.6s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="20" y="10" width="1160" height="400" rx="20" fill="url(#shine)"/>
 
----
+  <!-- Background live dots -->
+  <g clip-path="url(#innerClip)" opacity="0.6">
+    <!-- first row -->
+    <circle cx="80" cy="90" r="3" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="80;1160;80" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="150" r="2.4" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="260;1160;260" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="120" r="2.8" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="520;1160;520" dur="10.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="820" cy="180" r="2.6" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="820;1160;820" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.4s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="100" r="2.2" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="1040;1160;1040" dur="9.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.7s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
 
-## 🚀 𝘿𝙀𝙋𝙇𝙊𝙔 𝙉𝙊𝙒
-<p align="center">
-  <a href="https://dashboard.heroku.com/new?template=https://github.com/ANAYAT-AI/ANAYAT-AI">
-    <img src="https://img.shields.io/badge/Deploy-Heroku-7952B3?style=for-the-badge&logo=heroku&logoColor=white" />
-  </a>
-</p>
-<p align="center">⚡ Deploy your bot on <b>Heroku</b> easily.</p>
+    <!-- tiny sparkles -->
+    <circle cx="180" cy="210" r="1.6" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="180;1160;180" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="240" r="1.7" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="600;1160;600" dur="6.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="940" cy="220" r="1.5" fill="url(#dotsGrad)">
+      <animate attributeName="cx" values="940;1160;940" dur="6.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 
----
+  <!-- Heading -->
+  <text x="600" y="62" text-anchor="middle"
+        font-family="Segoe UI, Inter, system-ui, Arial, sans-serif"
+        font-size="28" font-weight="900" fill="#E6F7FF" filter="url(#softGlow)" letter-spacing="1.2">
+    BOT FEATURE ⏬
+  </text>
 
-## 📡 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙎
-<p align="center">
-  <a href="https://whatsapp.com/channel/0029VbAm8LqL2ATpxklIct2g">
-    <img src="https://img.shields.io/badge/Join-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-  </a>
-  <a href="https://api.whatsapp.com/send?phone=+923452401207&text=➪𝐇𝐄𝐘𓆩𝗞𝗔𝗦𝗛𝗠𝗜𝗥𝗜𝗛𝗔𝗖𝗞𝗘𝗥🐍🍷🌹'">
-    <img src="https://img.shields.io/badge/Contact-Owner-ff0000?style=for-the-badge&logo=whatsapp&logoColor=white" />
-  </a>
-</p>
-<p align="center">📢 Stay connected with <b>Channel</b> & <b>Owner</b> for updates.</p>
+  <!-- Feature columns -->
+  <g font-family="Fira Code, Consolas, monospace" font-size="16" font-weight="700" fill="#dff8ff">
+    <!-- Col 1 -->
+    <text x="80" y="100">
+      <tspan x="80" dy="0">• Auto Status Seen</tspan>
+      <tspan x="80" dy="24">• Auto Status Like</tspan>
+      <tspan x="80" dy="24">• Auto Status Reply</tspan>
+      <tspan x="80" dy="24">• Auto Reacts Message</tspan>
+      <tspan x="80" dy="24">• Antiviewones</tspan>
+      <tspan x="80" dy="24">• Antilink</tspan>
+      <tspan x="80" dy="24">• Antidelete</tspan>
+    </text>
 
----
+    <!-- Col 2 -->
+    <text x="380" y="100">
+      <tspan x="380" dy="0">• Status Downloading</tspan>
+      <tspan x="380" dy="24">• Status Sender</tspan>
+      <tspan x="380" dy="24">• Social Link Downloader</tspan>
+      <tspan x="380" dy="24">• YT Videos Downloader</tspan>
+      <tspan x="380" dy="24">• YT Search</tspan>
+      <tspan x="380" dy="24">• TikTok Search</tspan>
+      <tspan x="380" dy="24">• Ai ChatBot</tspan>
+    </text>
 
-## ⚡ 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
-- ✅ Auto Reply  
-- ✅ Media Downloader (FB, Insta, TikTok etc.)  
-- ✅ Group Management  
-- ✅ Easy Setup  
-- ✅ 24/7 Uptime  
+    <!-- Col 3 -->
+    <text x="700" y="100">
+      <tspan x="700" dy="0">• Ai Images Generator</tspan>
+      <tspan x="700" dy="24">• Groups Commands</tspan>
+      <tspan x="700" dy="24">• Kick</tspan>
+      <tspan x="700" dy="24">• Add</tspan>
+      <tspan x="700" dy="24">• Promote</tspan>
+      <tspan x="700" dy="24">• Demote</tspan>
+      <tspan x="700" dy="24">• Mute</tspan>
+    </text>
 
----
+    <!-- Col 4 -->
+    <text x="980" y="100">
+      <tspan x="980" dy="0">• Unmute</tspan>
+      <tspan x="980" dy="24">• Lock</tspan>
+      <tspan x="980" dy="24">• Unlock</tspan>
+      <tspan x="980" dy="24">• Names Change</tspan>
+      <tspan x="980" dy="24">• Description Change</tspan>
+      <tspan x="980" dy="24">• Fun Commands</tspan>
+      <tspan x="980" dy="24">• Tools Converter</tspan>
+    </text>
+  </g>
 
-## ⚠️ 𝙍𝙀𝙈𝙄𝙉𝘿𝙀𝙍
-- ❌ This bot is not affiliated with WhatsApp Inc.  
-- ⚡ Misuse may ban your number permanently.  
-- 🛡️ Owner is not responsible for any misuse.  
-
----
-
-## 📝 𝘿𝙄𝙎𝘾𝙇𝘼𝙄𝙈𝙀𝙍
-This bot is made for **learning & fun purposes only**.  
-Do not sell, misuse, or use without giving credits.  
-
----
-
-<h2 align="center">
-  🌈✨ Thanks for using <span style="color:#00FFFF">AYANAT-AI</span> ✨🌈
-</h2>
+  <!-- subtle bottom glow line (y 360 -> 400) -->
+  <rect x="40" y="400" width="1120" height="2" fill="url(#borderGrad)" opacity="0.8"/>
+</svg>
